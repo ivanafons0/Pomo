@@ -44,14 +44,14 @@ void save_session(sqlite3 *db, time_t startTime, int cycles, int workedTime, int
     }
 
     time_t endTime = time(NULL);
-    struct tm *startTm = localtime (startTime);
+    struct tm *startTm = localtime (&startTime);
     struct tm *endTm = localtime(&endTime);
 
     char fecha[20];
     char horaInicio[20];
     char horaFin[20];
 
-    strftime(fecha, sizeof(fecha), "%Y-%m-%d", startTime);
+    strftime(fecha, sizeof(fecha), "%Y-%m-%d", startTm);
     strftime(horaInicio, sizeof(horaInicio), "%H:%M:%S", startTm);
     strftime(horaFin, sizeof(horaFin), "%H:%M:%S", endTm);
 

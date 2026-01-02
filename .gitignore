@@ -35,6 +35,7 @@
 *.i*86
 *.x86_64
 *.hex
+pom
 
 # Debug files
 *.dSYM/
@@ -53,3 +54,17 @@ dkms.conf
 
 # debug information files
 *.dwo
+
+
+# Database SQLite
+*.db 
+pomDB
+
+# Temporal files
+*~
+*.swp
+*.swo
+
+# Backup files
+*.bak 
+*.backup 
